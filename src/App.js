@@ -70,9 +70,11 @@ const gatos = [
 function App() {
   return (
     <div className="App">
+      <div className="tarjetas">
       {
         gatos.map((gatos, i) => <Cards key={i} info={gatos}/>)
       }
+      </div>
     </div>
     
   );

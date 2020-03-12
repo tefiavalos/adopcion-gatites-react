@@ -2,7 +2,6 @@ import React from 'react';
 
 const Cards = props => {
   return(
-    <section className="tarjetas">
     <div className="card">
     <div className="img">
     <img src={props.info.img} />
@@ -13,7 +12,6 @@ const Cards = props => {
     <button className="mostrarModal">Ver más</button>
     </div>
     </div>
-    </section>
   )
 };
 

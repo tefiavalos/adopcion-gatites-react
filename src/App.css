@@ -62,18 +62,20 @@ h4 {
 }
 
 .tarjetas {
-    width: 70%;
-    margin: 10px;
+    width: 100%;
+    margin: 5px;
     display: flex;
-   
+    flex-wrap: wrap;
+    justify-content: space-around;   
 }
 
 .card {
     display: flex;
     border-radius: 10px;
     background-color: coral;
-    width:500px;
+    width:350px;
     height: 150px;
+    margin: 10px;
 }
 
 .img {

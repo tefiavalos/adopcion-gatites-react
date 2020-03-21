@@ -1,17 +1,27 @@
 import React from 'react';
+import styled from 'styled-components'
 
-const Cards = props => {
+const Card = styled.div`
+  display: flex;
+  border-radius: 10px;
+  background-color: ${prop=> prop.hayAdopcion ? "coral" : "grey"};
+  width:350px;
+  height: 150px;
+  margin: 10px;
+`
+
+const Cards = ({name, shortDesc, img, disponible}) => {
   return(
-    <div className="card">
+    <Card hayAdopcion={disponible}>
     <div className="img">
-    <img src={props.info.img} />
+    <img src={img} alt={name}/>
     </div>
     <div className="descripcion">
-    <h2>{props.info.name}</h2>
-    <p>{props.info.shortDesc}</p>
-    <button className="mostrarModal">Ver más</button>
+    <h2>{name}</h2>
+    <p>{shortDesc}</p>
+    <button className="mostrarModal">Ver mas</button>
     </div>
-    </div>
+    </Card>
   )
 };
 

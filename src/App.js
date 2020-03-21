@@ -15,6 +15,7 @@ const gatos = [
       'https://animalrevista.com/wp-content/uploads/2016/07/gatas-calico-tricolor-animal-la-revista.jpg',
     colores: ['tricolor', 'negro', 'blanco', 'naranja', 'rayado'],
     sexo: 'm',
+    disponible: false
   },
 
   {
@@ -27,6 +28,7 @@ const gatos = [
       'https://www.imagenesdegatos.net/wp-content/uploads/2015/12/gato-gris-ojos-naranja-3.jpg',
     colores: ['gris'],
     sexo: 'f',
+    disponible: true
   },
 
   {
@@ -39,6 +41,7 @@ const gatos = [
       'https://image.freepik.com/foto-gratis/primer-plano-hermoso-gato-negro-blanco-marcas-sueno-cara-acostado-piso-concreto_44161-220.jpg',
     colores: ['negro', 'blanco'],
     sexo: 'f',
+    disponible: true
   },
 
   {
@@ -51,6 +54,7 @@ const gatos = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkqkcBuVxZdrxWFYiEhoR3SpIioYCMesijUKHfjh7pTz-ctaf5&s',
     colores: ['rayado'],
     sexo: 'm',
+    disponible: true
   },
 
   {
@@ -63,20 +67,28 @@ const gatos = [
       'https://misanimales.com/wp-content/uploads/2018/07/mito-del-gato-negro.jpg',
     colores: ['negro'],
     sexo: 'm',
+    disponible: true
   },
-  
+
 ]
 
 function App() {
   return (
     <div className="App">
       <div className="tarjetas">
-      {
-        gatos.map((gatos, i) => <Cards key={i} info={gatos}/>)
-      }
+        {
+          gatos.map(gato =>
+            <Cards
+              key={gato.id}
+              name={gato.name}
+              shortDesc={gato.shortDesc}
+              img={gato.img}
+              disponible={gato.disponible} />
+          )
+        }
       </div>
     </div>
-    
+
   );
 }
 

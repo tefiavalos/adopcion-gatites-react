@@ -26,3 +26,5 @@ const Cards = ({name, shortDesc, img, disponible}) => {
 };
 
 export default Cards; 
+
+//si cambio desde GITHUB el read me tengo que hacer pull antes de pushear?
